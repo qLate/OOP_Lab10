@@ -1,0 +1,13 @@
+package Task23;
+
+import Task23.Database.БазаДаних;
+
+public class Main {
+    public static void main(String[] args) {
+        БазаДаних db = new БазаДаних();
+        Авторизація авторизація = new Авторизація();
+        if (авторизація.авторизуватися(db)) {
+            ReportBuilder br = new ReportBuilder(db);
+        }
+    }
+}
